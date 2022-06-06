@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Oswald", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -12,3 +16,25 @@ a {
 ul {
   list-style-type: none;
 }
+
+.morePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    background-color: #4f5f77;
+    color: antiquewhite;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+}
+
+@import "./nav";
+@import "./search";
+@import "./footer";
+@import "./picture";
