@@ -29,10 +29,12 @@ const Homepage = () => {
   //Load more picture
   const morepicture = async () => {
     let newURL;
-    if (input === "") {
+
+    //這裡
+    if (currentSearch === "") {
       newURL = `https://api.pexels.com/v1/curated?page=${page}&per_page=15`;
     } else {
-      newURL = `https://api.pexels.com/v1/search?query=${input}&per_page=15&page=${page}`;
+      newURL = `https://api.pexels.com/v1/search?query=${currentSearch}&per_page=15&page=${page}`;
     }
     setPage(page + 1);
     const dataFetch = await fetch(newURL, {
@@ -52,14 +54,14 @@ const Homepage = () => {
     search(intialURL);
   }, []);
 
-  // useEffect(() => {
-  //   if (currentSearch === "") {
-  //     search(intialURL);
-  //   } else {
-  //     search(searchURL);
-  //   }
-  //   // search(searchURL);
-  // }, [currentSearch]);
+  //這裡
+  useEffect(() => {
+    if (currentSearch === "") {
+      search(intialURL);
+    } else {
+      search(searchURL);
+    }
+  }, [currentSearch]);
 
   return (
     <div style={{ minHeight: "100vh" }}>
