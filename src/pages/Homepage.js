@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../components/Search";
 import Picture from "../components/Picture";
+import "../styles/style.css";
 
 const Homepage = () => {
   const [input, setInput] = useState("");
